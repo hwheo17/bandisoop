@@ -1,0 +1,197 @@
+{
+ "community": "반디숲 [BANDISOOP]",
+ "updated_at": "2026-11-25 02:14",
+ "period": "최근 3개월",
+ "member_count": 15,
+ "tier_counts": {
+  "🌲 숲 지킴이": 1,
+  "🌙 달빛반디": 1,
+  "✨ 별빛반디": 2,
+  "💡 형광반디": 11
+ },
+ "tier_rules": [
+  {
+   "tier": "✨ 별빛반디",
+   "rule": "총점 500점+ · 최근 3개월 옵치 음성 150점+ · 최근 1년 정모 1회+"
+  },
+  {
+   "tier": "🔥 불빛반디",
+   "rule": "총점 300점+ · 최근 3개월 옵치 음성 100점+"
+  },
+  {
+   "tier": "🟢 야광반디",
+   "rule": "총점 150점+ · 최근 3개월 옵치 음성 50점+"
+  },
+  {
+   "tier": "💡 형광반디",
+   "rule": "반디숲에 오신 걸 환영해요! 기본 등급"
+  }
+ ],
+ "members": [
+  {
+   "name": "효모링_01",
+   "tier": "🌲 숲 지킴이",
+   "points_3m": 1438,
+   "voice_min_3m": 2995,
+   "ow_min_3m": 1455,
+   "chats_3m": 179,
+   "photos_3m": 70,
+   "meets": 0,
+   "rank": 1
+  },
+  {
+   "name": "밥초밥",
+   "tier": "🌙 달빛반디",
+   "points_3m": 1069,
+   "voice_min_3m": 2588,
+   "ow_min_3m": 1508,
+   "chats_3m": 1,
+   "photos_3m": 0,
+   "meets": 4,
+   "rank": 2
+  },
+  {
+   "name": "도박킹",
+   "tier": "✨ 별빛반디",
+   "points_3m": 603,
+   "voice_min_3m": 957,
+   "ow_min_3m": 703,
+   "chats_3m": 1,
+   "photos_3m": 0,
+   "meets": 4,
+   "rank": 3
+  },
+  {
+   "name": "쿄물랭이",
+   "tier": "✨ 별빛반디",
+   "points_3m": 575,
+   "voice_min_3m": 1100,
+   "ow_min_3m": 848,
+   "chats_3m": 1,
+   "photos_3m": 0,
+   "meets": 2,
+   "rank": 4
+  },
+  {
+   "name": "레몬츄릅츄릅",
+   "tier": "💡 형광반디",
+   "points_3m": 270,
+   "voice_min_3m": 138,
+   "ow_min_3m": 138,
+   "chats_3m": 1,
+   "photos_3m": 0,
+   "meets": 8,
+   "rank": 5
+  },
+  {
+   "name": "딱꾸리",
+   "tier": "💡 형광반디",
+   "points_3m": 200,
+   "voice_min_3m": 0,
+   "ow_min_3m": 0,
+   "chats_3m": 0,
+   "photos_3m": 0,
+   "meets": 8,
+   "rank": 6
+  },
+  {
+   "name": "혀니갈릭",
+   "tier": "💡 형광반디",
+   "points_3m": 138,
+   "voice_min_3m": 277,
+   "ow_min_3m": 277,
+   "chats_3m": 0,
+   "photos_3m": 0,
+   "meets": 0,
+   "rank": 7
+  },
+  {
+   "name": "라쿤",
+   "tier": "💡 형광반디",
+   "points_3m": 91,
+   "voice_min_3m": 182,
+   "ow_min_3m": 181,
+   "chats_3m": 1,
+   "photos_3m": 0,
+   "meets": 0,
+   "rank": 8
+  },
+  {
+   "name": "단호박붕어빵",
+   "tier": "💡 형광반디",
+   "points_3m": 78,
+   "voice_min_3m": 116,
+   "ow_min_3m": 116,
+   "chats_3m": 0,
+   "photos_3m": 1,
+   "meets": 1,
+   "rank": 9
+  },
+  {
+   "name": "조아",
+   "tier": "💡 형광반디",
+   "points_3m": 0,
+   "voice_min_3m": 0,
+   "ow_min_3m": 0,
+   "chats_3m": 0,
+   "photos_3m": 0,
+   "meets": 5,
+   "rank": 10
+  },
+  {
+   "name": "이혜숙",
+   "tier": "💡 형광반디",
+   "points_3m": 0,
+   "voice_min_3m": 0,
+   "ow_min_3m": 0,
+   "chats_3m": 0,
+   "photos_3m": 0,
+   "meets": 1,
+   "rank": 11
+  },
+  {
+   "name": "이혜숙_01",
+   "tier": "💡 형광반디",
+   "points_3m": 0,
+   "voice_min_3m": 0,
+   "ow_min_3m": 0,
+   "chats_3m": 0,
+   "photos_3m": 0,
+   "meets": 1,
+   "rank": 12
+  },
+  {
+   "name": "송범준",
+   "tier": "💡 형광반디",
+   "points_3m": 0,
+   "voice_min_3m": 0,
+   "ow_min_3m": 0,
+   "chats_3m": 0,
+   "photos_3m": 0,
+   "meets": 1,
+   "rank": 13
+  },
+  {
+   "name": "신희찬",
+   "tier": "💡 형광반디",
+   "points_3m": 0,
+   "voice_min_3m": 0,
+   "ow_min_3m": 0,
+   "chats_3m": 0,
+   "photos_3m": 0,
+   "meets": 2,
+   "rank": 14
+  },
+  {
+   "name": "송범준",
+   "tier": "💡 형광반디",
+   "points_3m": 0,
+   "voice_min_3m": 0,
+   "ow_min_3m": 0,
+   "chats_3m": 0,
+   "photos_3m": 0,
+   "meets": 1,
+   "rank": 15
+  }
+ ]
+}

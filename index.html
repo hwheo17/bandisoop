@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>반디숲 랭킹</title>
+<meta name="description" content="오버워치 커뮤니티 반디숲의 최근 3개월 활동 랭킹과 등급">
+<meta property="og:title" content="반디숲 [BANDISOOP] 랭킹">
+<meta property="og:description" content="다정한 오버워치 커뮤니티 반디숲 — 최근 3개월 활동 랭킹">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1410; --bg2:#0f1d17; --card:#13241c; --line:#1f3a2d;
+  --text:#e8f3ec; --muted:#8fae9c; --glow:#e9ff7a; --glow2:#b6ff5c;
+  --gold:#ffd86b; --silver:#d6dee6; --bronze:#e0a56f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg)}
+body{font-family:'Noto Sans KR',system-ui,sans-serif;color:var(--text);background:
+  radial-gradient(1200px 600px at 80% -10%,#1d3b2b 0%,transparent 60%),
+  radial-gradient(900px 500px at -10% 20%,#16301f 0%,transparent 55%),var(--bg);
+  min-height:100vh;overflow-x:hidden}
+.flies{position:fixed;inset:0;pointer-events:none;z-index:0}
+.fly{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--glow);
+  box-shadow:0 0 8px 3px rgba(233,255,122,.55);opacity:0;animation:float var(--d) ease-in-out infinite;animation-delay:var(--delay)}
+@keyframes float{0%{opacity:0;transform:translate(0,0)}20%{opacity:.9}50%{opacity:.35;transform:translate(var(--x),var(--y))}80%{opacity:.85}100%{opacity:0;transform:translate(0,0)}}
+@media (prefers-reduced-motion:reduce){.fly{animation:none;opacity:.5}}
+main{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:48px 16px 64px}
+header{text-align:center;margin-bottom:36px}
+.eyebrow{font-size:13px;letter-spacing:.24em;color:var(--glow2);font-weight:700}
+h1{font-family:'Gowun Dodum',sans-serif;font-size:clamp(36px,8vw,60px);font-weight:400;margin:10px 0 8px;
+  text-shadow:0 0 24px rgba(233,255,122,.25)}
+.sub{color:var(--muted);font-size:15px;line-height:1.6}
+.meta{display:inline-flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.pill{border:1px solid var(--line);background:rgba(19,36,28,.7);border-radius:999px;padding:6px 12px;font-size:13px;color:var(--muted)}
+.pill b{color:var(--text);font-weight:700}
+section{margin-top:40px}
+h2{font-size:18px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+h2 small{font-weight:400;color:var(--muted);font-size:13px}
+.podium{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:end}
+.pod{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 12px;text-align:center;position:relative}
+.pod .medal{font-size:30px}
+.pod .nm{font-weight:900;font-size:17px;margin:6px 0 4px;word-break:break-all}
+.pod .tier{font-size:12px;color:var(--muted)}
+.pod .pts{margin-top:10px;font-size:22px;font-weight:900;color:var(--glow)}
+.pod .pts span{font-size:12px;color:var(--muted);font-weight:500}
+.pod.r1{padding-top:30px;border-color:rgba(255,216,107,.55);box-shadow:0 0 32px rgba(255,216,107,.12)}
+.pod.r2{border-color:rgba(214,222,230,.4)}
+.pod.r3{border-color:rgba(224,165,111,.45)}
+.list{display:flex;flex-direction:column;gap:8px}
+.row{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;background:var(--card);
+  border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.rk{font-weight:900;font-size:18px;color:var(--muted);text-align:center}
+.who .nm{font-weight:700;word-break:break-all}
+.who .tier{font-size:12px;color:var(--muted);margin-top:2px}
+.stats{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:6px}
+.score{text-align:right;font-weight:900;color:var(--glow);font-size:18px;white-space:nowrap}
+.score span{display:block;font-size:11px;color:var(--muted);font-weight:500}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.tcard .t{font-weight:700}
+.tcard .c{float:right;color:var(--glow);font-weight:900}
+.tcard p{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+.cta{margin-top:44px;text-align:center;background:linear-gradient(135deg,#183626,#122a1e);border:1px solid var(--line);border-radius:20px;padding:28px 18px}
+.cta h3{font-family:'Gowun Dodum',sans-serif;font-weight:400;font-size:24px}
+.cta p{color:var(--muted);margin-top:8px;font-size:14px;line-height:1.6}
+.btn{display:inline-block;margin-top:16px;background:var(--glow);color:#132013;font-weight:900;text-decoration:none;padding:12px 22px;border-radius:999px}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:36px}
+.empty{color:var(--muted);text-align:center;padding:30px}
+@media (max-width:560px){
+  .podium{grid-template-columns:1fr}
+  .pod.r1{order:-1}
+  .row{grid-template-columns:34px 1fr auto;padding:10px 12px}
+}
+</style>
+</head>
+<body>
+<div class="flies" id="flies" aria-hidden="true"></div>
+<main>
+  <header>
+    <div class="eyebrow">OVERWATCH COMMUNITY</div>
+    <h1>반디숲</h1>
+    <p class="sub">함께 게임하고, 함께 반짝이는 작은 숲.<br>최근 3개월 동안 가장 빛난 반디들이에요.</p>
+    <div class="meta" id="meta"></div>
+  </header>
+
+  <section>
+    <h2>🏆 이번 시즌 TOP 3</h2>
+    <div class="podium" id="podium"></div>
+  </section>
+
+  <section>
+    <h2>✨ 전체 랭킹 <small id="period"></small></h2>
+    <div class="list" id="list"><div class="empty">불러오는 중…</div></div>
+  </section>
+
+  <section>
+    <h2>🌿 반디 등급</h2>
+    <div class="tiers" id="tiers"></div>
+  </section>
+
+  <div class="cta" id="cta">
+    <h3>같이 반짝일 반디를 찾고 있어요</h3>
+    <p>오버워치를 즐기는 다정한 사람이라면 누구나 환영해요.<br>음성방에서 같이 놀다 보면 어느새 등급이 올라가 있을 거예요.</p>
+    <a class="btn" id="join" href="#" target="_blank" rel="noopener" hidden>반디숲 놀러가기</a>
+  </div>
+
+  <footer>점수는 디스코드 음성·채팅·사진 활동과 정모 참여로 매일 자동 집계돼요 · <span id="upd"></span></footer>
+</main>
+<script>
+// 가입 링크를 넣으면 버튼이 보여요 (비워 두면 숨김)
+const JOIN_URL = "";
+
+(function flies(){
+  const box=document.getElementById('flies');
+  for(let i=0;i<26;i++){
+    const f=document.createElement('div');f.className='fly';
+    f.style.left=Math.random()*100+'%';f.style.top=Math.random()*100+'%';
+    f.style.setProperty('--d',(6+Math.random()*8)+'s');
+    f.style.setProperty('--delay',(-Math.random()*10)+'s');
+    f.style.setProperty('--x',(Math.random()*80-40)+'px');
+    f.style.setProperty('--y',(Math.random()*80-40)+'px');
+    box.appendChild(f);
+  }
+})();
+
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const hm=m=>m>=60?`${Math.floor(m/60)}시간 ${m%60}분`:`${m}분`;
+const num=n=>Number(n).toLocaleString('ko-KR');
+
+fetch('ranking.json?'+Date.now()).then(r=>r.json()).then(d=>{
+  document.getElementById('meta').innerHTML=
+    `<span class="pill">반디 <b>${num(d.member_count)}</b>명</span>`+
+    Object.entries(d.tier_counts).map(([t,c])=>`<span class="pill">${esc(t)} <b>${c}</b></span>`).join('');
+  document.getElementById('period').textContent=`${d.period} 기준`;
+  document.getElementById('upd').textContent=`마지막 갱신 ${d.updated_at} (KST)`;
+
+  const ms=d.members.filter(m=>m.points_3m>0);
+  const medals=['🥇','🥈','🥉'];
+  document.getElementById('podium').innerHTML=ms.slice(0,3).map((m,i)=>`
+    <div class="pod r${i+1}">
+      <div class="medal">${medals[i]}</div>
+      <div class="nm">${esc(m.name)}</div>
+      <div class="tier">${esc(m.tier)}</div>
+      <div class="pts">${num(m.points_3m)}<span> 점</span></div>
+    </div>`).join('')||'<div class="empty">아직 기록이 없어요</div>';
+
+  document.getElementById('list').innerHTML=ms.length?ms.map(m=>`
+    <div class="row">
+      <div class="rk">${m.rank<=3?medals[m.rank-1]:m.rank}</div>
+      <div class="who">
+        <div class="nm">${esc(m.name)}</div>
+        <div class="tier">${esc(m.tier)}</div>
+        <div class="stats"><span>🎙️ ${hm(m.voice_min_3m)}</span><span>🛡️ 옵치 ${hm(m.ow_min_3m)}</span><span>💬 ${num(m.chats_3m)}</span><span>📷 ${num(m.photos_3m)}</span><span>⛺ 정모 ${m.meets}회</span></div>
+      </div>
+      <div class="score">${num(m.points_3m)}<span>점</span></div>
+    </div>`).join(''):'<div class="empty">아직 기록이 없어요</div>';
+
+  document.getElementById('tiers').innerHTML=d.tier_rules.map(t=>`
+    <div class="tcard"><span class="t">${esc(t.tier)}</span><span class="c">${d.tier_counts[t.tier]||0}</span><p>${esc(t.rule)}</p></div>`).join('');
+
+  if(JOIN_URL){const b=document.getElementById('join');b.href=JOIN_URL;b.hidden=false;}
+}).catch(()=>{document.getElementById('list').innerHTML='<div class="empty">랭킹을 불러오지 못했어요. 잠시 후 다시 시도해 주세요.</div>'});
+</script>
+</body>
+</html>
